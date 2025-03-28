@@ -1,40 +1,69 @@
-# electron-quick-start
+# Excalidraw Desktop
 
-**Clone and run for a quick way to see Electron in action.**
+**Um wrapper Electron para o Excalidraw Web**
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start) within the Electron documentation.
+Esta é uma aplicação desktop que encapsula o [Excalidraw](https://excalidraw.com/) - uma ferramenta de quadro branco virtual para criar diagramas com aparência de desenho à mão. O aplicativo utiliza Electron para fornecer uma experiência nativa em seu computador.
 
-A basic Electron application needs just these files:
+## Características
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-- `preload.js` - A content script that runs before the renderer process loads.
+- Acesso offline ao Excalidraw
+- Interface nativa para desktop
+- Mesma experiência do Excalidraw Web, mas como aplicativo nativo
+- Disponível para Windows
 
-You can learn more about each of these components in depth within the [Tutorial](https://electronjs.org/docs/latest/tutorial/tutorial-prerequisites).
+## Como usar
 
-## To Use
+### Instalação
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+#### Método 1: Instalador
+
+1. Baixe o instalador da seção de releases
+2. Execute o instalador e siga as instruções
+3. O aplicativo será instalado e um atalho será criado na área de trabalho
+
+#### Método 2: Versão portátil
+
+1. Baixe a versão portátil da seção de releases
+2. Extraia o arquivo
+3. Execute o arquivo `ExcalidrawDesktop.exe`
+
+### Desenvolvimento
+
+Para clonar e executar este repositório, você precisará do [Git](https://git-scm.com) e do [Node.js](https://nodejs.org/en/download/) (que vem com [npm](http://npmjs.com)) instalados em seu computador. Execute em seu terminal:
 
 ```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
+# Clone este repositório
+git clone https://github.com/seu-usuario/excalidraw-desktop
+# Entre no repositório
+cd excalidraw-desktop
+# Instale as dependências
 npm install
-# Run the app
-npm start
+# Execute o aplicativo em modo de desenvolvimento
+npm run dev
 ```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+### Comandos disponíveis
 
-## Resources for Learning Electron
+| Comando                    | Descrição                                             |
+| -------------------------- | ----------------------------------------------------- |
+| `npm run start`            | Inicia o Electron                                     |
+| `npm run build`            | Compila os arquivos usando Webpack                    |
+| `npm run dev`              | Compila e inicia o aplicativo em modo desenvolvimento |
+| `npm run pack-win`         | Empacota o aplicativo para Windows                    |
+| `npm run create-installer` | Cria um instalador usando Inno Setup                  |
+| `npm run dist`             | Gera distribuições com electron-builder               |
+| `npm run create-shortcut`  | Cria um atalho na área de trabalho                    |
+| `npm run full-install`     | Empacota e cria atalho em um único comando            |
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [Electron Fiddle](https://electronjs.org/fiddle) - Electron Fiddle, an app to test small Electron experiments
+## Por que um aplicativo desktop para Excalidraw?
 
-## License
+Embora o Excalidraw já esteja disponível como um PWA (Progressive Web App), este aplicativo desktop oferece:
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+- Integração mais profunda com o sistema operacional
+- Ícone na barra de tarefas/dock
+- Experiência offline mais robusta
+- Startup mais rápido
+
+## Licença
+
+[MIT](LICENSE)
